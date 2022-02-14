@@ -1,0 +1,34 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="سلام این یک پیام تستی است">
+    <title>Form</title>
+</head>
+<body>
+    <div id="back">
+        <input id="txt" type="text" placeholder="Enter Your Name">
+        <button id="btnSing" onclick="Sing_in()" class="btnSing">Sing in</button>
+        <p id="Message" style="display: none"></p>
+        <button id="btnR" onclick="R()" class="btnSing" style="display: none">Again ...</button>
+    </div>
+</body>
+<script>
+    function Sing_in()
+    {
+        var Name = document.getElementById("txt").value;
+        var Message = document.getElementById("Message").textContent = "Hi" + " " + Name;
+        var Message = document.getElementById("Message").style.display = "flex";
+        var Message = document.getElementById("btnR").style.display = "block";
+        var Message = document.getElementById("btnSing").style.display = "none";
+        var Message = document.getElementById("txt").style.display = "none";
+    }
+    function R()
+    {
+        location.reload();
+    }
+</script>
+</html>
